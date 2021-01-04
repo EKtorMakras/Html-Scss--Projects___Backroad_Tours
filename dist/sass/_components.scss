@@ -1,0 +1,37 @@
+// * -------------------- Buttons -------------------- //
+
+.btn {
+
+    //^ Generic buttons
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 20rem;
+        font-size: $fnt-default;
+        @include transition(.2s, ease);
+
+        border: none;
+        cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+        // transform: translateY(1px);
+        box-shadow: $box-shadow;
+        outline: none;
+    }
+}
+
+//* -------------------- //
+
+
+
+// * -------------------- Buttons -------------------- //
+
+
+
+//* --------------------

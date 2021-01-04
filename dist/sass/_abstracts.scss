@@ -1,0 +1,249 @@
+// * --------------------------------- VARIABLES --------------------------------- //
+
+//& COLORS
+
+$clr-black:#000;
+$clr-white:#fff;
+
+$clr-grey-light-1:#f7f7f7;
+$clr-grey-light-2:#eee;
+
+$clr-grey-dark-1:#777;
+$clr-grey-dark-2:#999;
+$clr-grey-dark-3:#333;
+
+// $clr-primary:;
+// $clr-primary-light:;
+// $clr-primary-dark:;
+
+// $clr-secondary:;
+// $clr-secondary-light:;
+// $clr-secondary-dark:;
+
+// $clr-tertiary:;
+// $clr-tertiary-light:;
+// $clr-tertiary-dark:;
+
+
+
+
+//& GRID
+
+$grid-width:114rem;
+$gutter-vertical:8rem;
+$gutter-horizontal:6rem;
+
+
+
+
+//& FONTS
+
+// Text
+$fnt-small-1:1.2rem;
+$fnt-small-2:1.4rem;
+$fnt-default:1.6rem;
+$fnt-big-1:1.8rem;
+$fnt-big-2:2rem;
+$fnt-big-3:2.2rem;
+
+// Headings
+$fnt-head-1:6rem;
+$fnt-head-2:4rem;
+$fnt-head-3:2.5rem;
+$fnt-head-4:1.8rem;
+
+
+
+
+//& SHADOWS
+
+$box-shadow: 0 1rem 2rem rgba($clr-black, .2);
+$text-shadow: 0 .4rem .8rem rgba($clr-black, .15);
+
+
+
+//& OTHER
+
+$radius:3px;
+$transition:all .3s ease;
+
+//*---------------------------------
+
+
+
+
+// * --------------------------------- MIXINS --------------------------------- //
+
+//& --- Center an element --- //
+
+// Center with position
+
+@mixin center-pos($position) {
+    position: $position;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// --- //
+
+
+
+// Center with flexbox
+
+@mixin center-flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+// --- //
+
+//& --- --- //
+
+
+//  Clearfix //
+
+@mixin clearfix {
+
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// --- //
+
+
+// Transition
+
+@mixin transition($time, $function) {
+    transition: all $time $function;
+}
+
+// --- //
+
+
+// Shadows
+
+@mixin box-shadow ($blur, $op) {
+    box-shadow: 0 1rem $blur rgba($clr-black, $op);
+}
+
+@mixin text-shadow ($blur, $op) {
+    box-shadow: 0 .4rem $blur rgba($clr-black, $op);
+}
+
+// --- //
+
+
+//& ---------- Media Queries ---------- //
+
+
+
+//@ ----- All Widths ----- //
+
+@mixin media-min ($width) {
+    @media screen and (min-width:$width) {
+        @content;
+    }
+}
+
+@mixin media-max ($width) {
+    @media screen and (max-width:$width) {
+        @content;
+    }
+}
+
+@mixin media-min-max($min-width, $max-width) {
+    @media screen and (min-width:$min-width) and (max-width:$max-width) {
+        @content;
+    }
+}
+
+//@ -----  ----- //
+
+
+
+//@ ----- Custom Widths ----- //
+
+
+//# -- Breakpoint Choices --//
+
+// -- phone (0-600px)
+// -- tab-port (600-900px)
+// -- tab-land (900-1200px)
+// -- desktop  (1200-1800px)
+// -- desktop-big (1800px +)
+
+//# -- -- //
+
+@mixin respond($breakpoint) {
+
+    // 600px
+
+    @if $breakpoint==phone {
+        @media screen and (max-width:37.5em) {
+            @content;
+        }
+    }
+
+
+    // 900px
+
+    @if $breakpoint==tab-port {
+        @media screen and (max-width:56.25em) {
+            @content;
+        }
+    }
+
+
+    // 1200px
+
+    @if $breakpoint==tab-land {
+        @media screen and (max-width:75em) {
+            @content;
+        }
+    }
+
+
+    @if $breakpoint==desktop {
+        @media screen and (min-width:75em) {
+            @content;
+        }
+    }
+
+
+    // 1800px
+
+    @if $breakpoint==desktop-big {
+        @media screen and (min-width:112.5em) {
+            @content;
+        }
+    }
+}
+
+//@ -----  ----- //
+
+
+//& ----------   ---------- //
+
+//$ -- Media -- //
+
+@include respond (tab-port) {}
+
+//$ ---- //
+
+
+//*---------------------------------
+
+
+// * --------------------------------- FUNCTIONS--------------------------------- //
+
+
+//*---------------------------------
