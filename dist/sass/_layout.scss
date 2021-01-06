@@ -7,6 +7,78 @@
 
 // * --------------------------------- HEADER --------------------------------- //
 
+.header {}
+
+
+//% --- Hero --- // 
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, $clr-primary-5, $clr-primary-6);
+
+    @include center-flex;
+
+
+    &__banner {
+        text-align: center;
+        color: #fff;
+        padding: 0 4.8rem;
+    }
+
+    &__heading {
+        font-weight: 300;
+    }
+
+    &__text {
+        max-width: 56rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        letter-spacing: $spacing;
+    }
+
+    &__btn {
+
+        &,
+        &:link,
+        &:visited {
+            padding: 1.44rem 2.56rem;
+            font-size: $fnt-big-2;
+            background-color: #fff;
+            color: $clr-primary-5;
+        }
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+
+//$ -- Media -- //
+
+@include media-min(600px) {
+
+    .hero {
+        background: linear-gradient(rgba($clr-primary-5, .7), rgba($clr-black, .7)), url(../images/main.jpeg) center/cover no-repeat;
+
+        &__banner {
+            padding: 0;
+        }
+
+        &__text {
+            max-width: 72rem;
+        }
+    }
+}
+
+//$ ---- //
+
+//% --- //
+
 
 //*--------------------------------- //
 

@@ -5,34 +5,55 @@
 $clr-black:#000;
 $clr-white:#fff;
 
-$clr-grey-light-1:#f7f7f7;
-$clr-grey-light-2:#eee;
 
-$clr-grey-dark-1:#777;
-$clr-grey-dark-2:#999;
-$clr-grey-dark-3:#333;
+//^ Shades of grey //
 
-// $clr-primary:;
-// $clr-primary-light:;
-// $clr-primary-dark:;
+/* darkest grey - used for headings */
+$clr-grey-1: #102a42;
+$clr-grey-2: #243a52;
+$clr-grey-3: #324d67;
+$clr-grey-4: #48647f;
 
-// $clr-secondary:;
-// $clr-secondary-light:;
-// $clr-secondary-dark:;
+/* grey used for paragraphs */
+$clr-grey-5: #617d98;
+$clr-grey-6: #829ab0;
+$clr-grey-7: #9eb2c7;
+$clr-grey-8: #bcccdc;
+$clr-grey-9: #dae2ec;
+$clr-grey-10: #f1f5f8;
 
-// $clr-tertiary:;
-// $clr-tertiary-light:;
-// $clr-tertiary-dark:;
+//^ --- //
 
+
+//^ Primary Color //
+
+/* dark shades of primary color*/
+$clr-primary-1: #044e53;
+$clr-primary-2: #0a6c75;
+$clr-primary-3: #0e7c86;
+$clr-primary-4: #149199;
+
+/* primary/main color */
+$clr-primary-5: #2caeba;
+
+/* lighter shades of primary color */
+$clr-primary-6: #37bcc8;
+$clr-primary-7: #52d1da;
+$clr-primary-8: #88ebf2;
+$clr-primary-9: #bff8fd;
+$clr-primary-10: #e0fcff;
+
+// ^ --- //
 
 
 
 //& GRID
 
 $grid-width:114rem;
+$grid-width-small:50rem;
 $gutter-vertical:8rem;
+$gutter-vertical-small:6rem;
 $gutter-horizontal:6rem;
-
 
 
 
@@ -46,12 +67,19 @@ $fnt-big-1:1.8rem;
 $fnt-big-2:2rem;
 $fnt-big-3:2.2rem;
 
-// Headings
-$fnt-head-1:6rem;
-$fnt-head-2:4rem;
-$fnt-head-3:2.5rem;
-$fnt-head-4:1.8rem;
 
+// Headings
+
+$fnt-head-1: 4.8rem;
+$fnt-head-2: 3.2rem;
+$fnt-head-3: 2rem;
+$fnt-head-4: 1.4rem;
+
+
+
+// Font Families
+$ff-primary: "Lato",
+sans-serif;
 
 
 
@@ -60,11 +88,15 @@ $fnt-head-4:1.8rem;
 $box-shadow: 0 1rem 2rem rgba($clr-black, .2);
 $text-shadow: 0 .4rem .8rem rgba($clr-black, .15);
 
+$light-shadow: 0 .5rem 1.5rem rgba($clr-black, 0.1);
+$dark-shadow: 0 .5rem 1.5rem rgba($clr-black, 0.2);
+
 
 
 //& OTHER
 
-$radius:3px;
+$spacing: 0.25rem;
+$radius:0.8rem;
 $transition:all .3s ease;
 
 //*---------------------------------
@@ -92,9 +124,8 @@ $transition:all .3s ease;
 
 // Center with flexbox
 
-@mixin center-flex($direction) {
+@mixin center-flex {
     display: flex;
-    flex-direction: $direction;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -105,7 +136,8 @@ $transition:all .3s ease;
 //& --- --- //
 
 
-//  Clearfix //
+
+//&  Clearfix //
 
 @mixin clearfix {
 
@@ -117,19 +149,21 @@ $transition:all .3s ease;
     }
 }
 
-// --- //
+//& --- //
 
 
-// Transition
+
+//& Transition
 
 @mixin transition($time, $function) {
     transition: all $time $function;
 }
 
-// --- //
+//& --- //
 
 
-// Shadows
+
+//& Shadows
 
 @mixin box-shadow ($blur, $op) {
     box-shadow: 0 1rem $blur rgba($clr-black, $op);
@@ -139,11 +173,11 @@ $transition:all .3s ease;
     box-shadow: 0 .4rem $blur rgba($clr-black, $op);
 }
 
-// --- //
+//& --- //
+
 
 
 //& ---------- Media Queries ---------- //
-
 
 
 //@ ----- All Widths ----- //
@@ -235,7 +269,7 @@ $transition:all .3s ease;
 
 //$ -- Media -- //
 
-@include respond (tab-port) {}
+@include media-min(900px) {}
 
 //$ ---- //
 

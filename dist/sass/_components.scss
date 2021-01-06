@@ -8,21 +8,24 @@
     &:link,
     &:visited {
         text-transform: uppercase;
-        padding: 1.5rem 4rem;
+        background-color: $clr-primary-5;
+        color: #fff;
+        padding: 0.6rem 1.2rem;
         display: inline-block;
-        border-radius: 20rem;
-        font-size: $fnt-default;
-        @include transition(.2s, ease);
-
-        border: none;
+        font-size: $fnt-small-2;
+        font-weight: 700;
+        letter-spacing: $spacing;
+        transition: $transition;
+        border: 2px solid transparent;
         cursor: pointer;
+
+        box-shadow: 0 1px 3px rgba($clr-black, .2);
     }
 
     &:active,
     &:focus {
-        // transform: translateY(1px);
-        box-shadow: $box-shadow;
-        outline: none;
+        background-color: $clr-primary-8;
+        color: $clr-primary-1;
     }
 }
 
