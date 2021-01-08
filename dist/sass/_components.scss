@@ -10,7 +10,7 @@
         text-transform: uppercase;
         background-color: $clr-primary-5;
         color: #fff;
-        padding: 0.6rem 1.2rem;
+        padding: 0.9rem 1.3rem;
         display: inline-block;
         font-size: $fnt-small-2;
         font-weight: 700;
@@ -18,12 +18,13 @@
         transition: $transition;
         border: 2px solid transparent;
         cursor: pointer;
+        border-radius: $radius;
 
         box-shadow: 0 1px 3px rgba($clr-black, .2);
     }
 
     &:active,
-    &:focus {
+    &:hover {
         background-color: $clr-primary-8;
         color: $clr-primary-1;
     }

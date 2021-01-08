@@ -96,7 +96,7 @@ $dark-shadow: 0 .5rem 1.5rem rgba($clr-black, 0.2);
 //& OTHER
 
 $spacing: 0.25rem;
-$radius:0.8rem;
+$radius:0.3rem;
 $transition:all .3s ease;
 
 //*---------------------------------
@@ -108,10 +108,10 @@ $transition:all .3s ease;
 
 //& --- Center an element --- //
 
-// Center with position
+// Center with position //
 
-@mixin center-pos($position) {
-    position: $position;
+@mixin center-pos {
+    position: absolute;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -122,13 +122,24 @@ $transition:all .3s ease;
 
 
 
-// Center with flexbox
+// Center with flexbox //
 
 @mixin center-flex {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+// --- //
+
+
+
+// Center with margins //
+
+@mixin center-mar {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // --- //

@@ -7,7 +7,9 @@
 
 // * --------------------------------- HEADER --------------------------------- //
 
-.header {}
+.header {
+    margin-bottom: 4.2rem;
+}
 
 
 //% --- Hero --- // 
@@ -27,12 +29,14 @@
 
     &__heading {
         font-weight: 300;
+        margin-bottom: 3rem;
     }
 
     &__text {
         max-width: 56rem;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 5rem;
         color: #fff;
         letter-spacing: $spacing;
     }

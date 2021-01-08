@@ -37,7 +37,7 @@ html {
 
 @media screen and (max-width: 37.5em) {
   html {
-    font-size: 43.75%;
+    font-size: 46%;
   }
 }
 
@@ -48,6 +48,7 @@ body {
   background-color: #fff;
   color: #102a42;
   font-size: 1.4rem;
+  overflow-x: hidden;
 }
 
 h1,
@@ -67,18 +68,21 @@ h1 {
 
 h2 {
   font-size: 3.2rem;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 400;
+  color: #102a42;
 }
 
 h3 {
   font-size: 2rem;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 700;
+  color: #102a42;
 }
 
-h3 {
+h4 {
   font-size: 1.4rem;
+  color: #243a52;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 800px) {
@@ -236,6 +240,31 @@ img {
   }
 }
 
+.section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.section-title span {
+  color: #2caeba;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -334,7 +363,7 @@ img {
   text-transform: uppercase;
   background-color: #2caeba;
   color: #fff;
-  padding: 0.6rem 1.2rem;
+  padding: 0.9rem 1.3rem;
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 700;
@@ -343,13 +372,18 @@ img {
   transition: all 0.3s ease;
   border: 2px solid transparent;
   cursor: pointer;
+  border-radius: 0.3rem;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active, .btn:focus {
+.btn:active, .btn:hover {
   background-color: #88ebf2;
   color: #044e53;
+}
+
+.header {
+  margin-bottom: 4.2rem;
 }
 
 .hero {
@@ -376,12 +410,14 @@ img {
 
 .hero__heading {
   font-weight: 300;
+  margin-bottom: 3rem;
 }
 
 .hero__text {
   max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5rem;
   color: #fff;
   letter-spacing: 0.25rem;
 }
@@ -483,5 +519,411 @@ img {
 
 .row .col-3-of-4 {
   width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+.section-about__article {
+  margin-bottom: 2rem;
+}
+
+.section-about__img-container {
+  position: relative;
+}
+
+.section-about__img {
+  position: relative;
+}
+
+.section-about__btn {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 756px) {
+  .section-about__center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section-about__article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 2.5rem);
+            flex: 0 0 calc(50% - 2.5rem);
+    margin-bottom: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .section-about__img-container::before {
+    content: '';
+    position: absolute;
+    border: 0.6rem solid #2caeba;
+    width: 100%;
+    height: 100%;
+    top: -2.3rem;
+    left: -2.3rem;
+  }
+}
+
+.section-services {
+  background-color: #f1f5f8;
+}
+
+.section-services__article {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.section-services__icon {
+  background-color: #2caeba;
+  color: #044e53;
+  display: inline-block;
+  padding: 0.8rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.section-services__text {
+  max-width: 30rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 576px) {
+  .section-services__center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section-services__article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 1rem);
+            flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 867px) {
+  .section-services__article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.333% - 1rem);
+            flex: 0 0 calc(33.333% - 1rem);
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .section-services__article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
+  .section-services__text {
+    text-align: left;
+  }
+  .section-services__icon {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .section-services__info {
+    padding-left: 1.8rem;
+  }
+}
+
+.section-tours__card {
+  background-color: #dae2ec;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 8rem;
+}
+
+.section-tours__card:hover {
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.section-tours__img-container {
+  position: relative;
+}
+
+.section-tours__img {
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-tours__date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #88ebf2;
+  color: #044e53;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  padding: 0.4rem 0.8rem;
+}
+
+.section-tours__info {
+  padding: 2rem;
+}
+
+.section-tours__title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+}
+
+.section-tours__heading {
+  margin-bottom: 0;
+  line-height: 1.25;
+}
+
+.section-tours__text-days {
+  margin-bottom: 0;
+  line-height: 1.25;
+  color: #617d98;
+}
+
+.section-tours__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+
+.section-tours__footer p {
+  line-height: 0;
+  text-transform: capitalize;
+  color: #2caeba;
+  margin-bottom: 0;
+}
+
+.section-tours__btn-container {
+  text-align: center;
+}
+
+.section-tours__btn, .section-tours__btn:link, .section-tours__btn:visited {
+  padding: 1.1rem 3.2rem;
+}
+
+@media screen and (min-width: 534px) {
+  .section-tours__center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section-tours__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 3rem);
+            flex: 0 0 calc(50% - 3rem);
+  }
+  .section-tours__img {
+    height: 25rem;
+  }
+}
+
+@media screen and (min-width: 896px) {
+  .section-tours__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.33% - 2.7rem);
+            flex: 0 0 calc(33.33% - 2.7rem);
+  }
+  .section-tours__img {
+    height: 23rem;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .section-tours__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(25% - 2.7rem);
+            flex: 0 0 calc(25% - 2.7rem);
+  }
+  .section-tours__img {
+    height: 21rem;
+  }
+}
+
+.section-contact {
+  background-color: #f1f5f8;
+  padding-bottom: 0;
+}
+
+.section-contact__center {
+  background-color: #2caeba;
+  padding: 7rem 4rem;
+  margin: 0;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.section-contact__title {
+  color: #fff;
+}
+
+.section-contact__title--heading {
+  color: inherit;
+  font-weight: 400;
+}
+
+.section-contact__title--paragraph {
+  color: #bff8fd;
+  font-size: 2rem;
+}
+
+.section-contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 50rem;
+  margin-top: 2rem;
+}
+
+.section-contact__form--input, .section-contact__form--btn {
+  padding: 1rem 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  background-color: #fff;
+  text-transform: capitalize;
+  border-color: transparent;
+}
+
+.section-contact__form--input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 80%;
+          flex: 0 1 80%;
+  color: #2caeba;
+  border: 1.2px solid #bcccdc;
+  text-transform: none;
+}
+
+.section-contact__form--input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.section-contact__form--input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.section-contact__form--input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.section-contact__form--input::placeholder {
+  color: inherit;
+}
+
+.section-contact__form--input:hover {
+  -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.section-contact__form--input:focus {
+  border: 1.2px solid #9eb2c7;
+  outline: none;
+  -webkit-box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.2);
+}
+
+.section-contact__form--btn {
+  font-family: "Lato", sans-serif;
+  margin-left: 1.4rem;
+  font-weight: 700;
+  background-color: #88ebf2;
+  color: #044e53;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section-contact__form--btn:hover {
+  background-color: #0a6c75;
+  color: #52d1da;
+}
+
+@media screen and (max-width: 350px) {
+  .section-contact__form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section-contact__form--input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .section-contact__form--btn {
+    margin-left: 0;
+    margin-top: 1.3rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+}
+
+@media screen and (min-width: 946px) {
+  .section-contact__center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section-contact__title {
+    margin-right: 3rem;
+  }
+  .section-contact__form {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 60%;
+    margin-top: 0;
+  }
+  .section-contact__form--input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
