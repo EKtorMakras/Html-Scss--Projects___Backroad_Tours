@@ -28,11 +28,81 @@
 
   <header class="header" id="home">
 
-    <!--% ----- Navbar ----- -->
-    <!--% --- End Of Navbar --- -->
+
+    <!--& ----- Navbar ----- -->
+
+    <nav class="navbar">
+
+      <div class="navbar__center">
+
+        <!--# Nav-header -->
+        <div class="navbar__header">
+          <img src="./images/logo.svg" alt="logo" class="navbar__logo">
+          <button class="navbar__toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!--# End Of Nav-header -->
 
 
-    <!--% ----- Hero----- -->
+        <!--# Navbar Links -->
+        <ul class="navbar__links" id="nav-links">
+
+          <li class="navbar__item">
+            <a href="#home" class="navbar__link scroll-link">Home</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="#about" class="navbar__link scroll-link">About</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="#services" class="navbar__link scroll-link">Services</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="#tours" class="navbar__link scroll-link">Tours</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="#gallery" class="navbar__link scroll-link">Gallery</a>
+          </li>
+
+        </ul>
+        <!--# End Of Navbar Links -->
+
+
+        <!--# Navbar Icons -->
+        <ul class="navbar__icons">
+
+          <li class="navbar__item">
+            <a href="https://www.twitter.com" class="navbar__icon" target="blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="https://www.facebook.com" class="navbar__icon" target="blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="https://www.instagram.com" class="navbar__icon" target="blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+
+        </ul>
+        <!--# End Of Navbar Icons -->
+
+      </div>
+
+    </nav>
+    <!--& --- End Of Navbar --- -->
+
+
+    <!--& ----- Hero----- -->
 
     <div class="hero">
       <div class="hero__banner">
@@ -44,7 +114,7 @@
       </div>
     </div>
 
-    <!--% --- End Of Hero--- -->
+    <!--& --- End Of Hero--- -->
 
 
   </header>
@@ -85,13 +155,17 @@
 
         <article class="section-about__article  section-about__info">
 
-          <h3>explore the difference</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium harum fuga odio molestias
+          <h3 class="section-about__heading">explore the difference</h3>
+          <p class="section-about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium
+            harum fuga odio molestias
             quibusdam dolores neque culpa quasi cumque.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium harum fuga odio molestias
+          <p class="section-about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusantium
+            harum fuga odio molestias
             quibusdam dolores neque culpa quasi cumque.</p>
 
-          <a href="#" class="btn section-about__btn">Read more</a>
+          <div class="section-about__btn-container">
+            <a href="#" class="btn section-about__btn">Read more</a>
+          </div>
 
         </article>
 
@@ -113,7 +187,7 @@
 
       <!--# Title -->
       <div class="section-title">
-        <h2>about <span>services</span></h2>
+        <h2>our <span>services</span></h2>
       </div>
       <!--# End of Title -->
 
@@ -437,6 +511,76 @@
 
     <!--& --- Section-Gallery --- -->
 
+    <section class="section-gallery" id="gallery">
+
+      <div class="section-gallery__center">
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-1.jpeg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-2.jpeg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-3.jpg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-4.jpg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-5.jpg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-6.jpg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-7.jpg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+
+        <!--# Single Item -->
+        <article class="section-gallery__img-container">
+          <img src="./images/gallery-8.jpg" alt="" class="section-gallery__img">
+          <a href="#" class="section-gallery__icon"><i class="fas fa-search"></i></a>
+        </article>
+        <!--# End Of Single Item -->
+
+      </div>
+    </section>
+
 
     <!--&  End Of Section-Gallery -->
 
@@ -449,7 +593,63 @@
 
   <!--* ---------------------* Footer *--------------------- -->
 
-  <footer class="footer">
+  <footer class="footer section">
+
+    <!--# Footer Links -->
+    <ul class="footer__links">
+
+      <li class="footer__links--item">
+        <a href="#home" class="footer__link scroll-link">Home</a>
+      </li>
+
+      <li class="footer__links--item">
+        <a href="#about" class="footer__link scroll-link">About</a>
+      </li>
+
+      <li class="footer__links--item">
+        <a href="#services" class="footer__link scroll-link">Services</a>
+      </li>
+
+      <li class="footer__links--item">
+        <a href="#tours" class="footer__link scroll-link">Tours</a>
+      </li>
+
+      <li class="footer__links--item">
+        <a href="#gallery" class="footer__link scroll-link">Gallery</a>
+      </li>
+
+    </ul>
+    <!--# End Of Footer Links -->
+
+
+
+    <!--# Footer Icons -->
+    <ul class="footer__icons">
+
+      <li class="footer__icons--item">
+        <a href="https://www.twitter.com" class="footer__icons--icon" target="blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+
+      <li class="footer__icons--item">
+        <a href="https://www.facebook.com" class="footer__icons--icon" target="blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+
+      <li class="footer__icons--item">
+        <a href="https://www.instagram.com" class="footer__icons--icon" target="blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+
+    </ul>
+    <!--# End Of Footer Icons -->
+
+    <p class="footer__copyright">
+      Copyright &copy; backroads tour company <span id="date"></span> all rights reserved.
+    </p>
 
   </footer>
 

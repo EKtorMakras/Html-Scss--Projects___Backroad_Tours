@@ -21,6 +21,35 @@
         margin-top: 1rem;
     }
 
+
+    //$ -- Media -- //
+
+    @include media-max(534px) {
+
+        &__heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        &__btn-container {
+            text-align: center;
+        }
+
+        &__text {
+            @include center-mar;
+            padding: 0 2rem;
+            max-width: 50rem;
+            text-align: justify;
+            margin-bottom: 2rem;
+
+        }
+
+    }
+
+    //$ ---- //
+
+
+
     //$ -- Media -- //
 
     @include media-min(756px) {
@@ -90,7 +119,7 @@
 
     &__text {
         max-width: 30rem;
-        text-align: center;
+        text-align: justify;
         @include center-mar;
     }
 
@@ -315,6 +344,7 @@
 
     background-color: $clr-grey-10;
     padding-bottom: 0;
+    margin-bottom: 0;
 
     &__center {
         background-color: $clr-primary-5;
@@ -340,7 +370,7 @@
 
     &__form {
         display: flex;
-        max-width: 50rem;
+        max-width: 80rem;
         margin-top: 2rem;
 
         &--input,
@@ -378,7 +408,7 @@
 
         &--btn {
             font-family: $ff-primary;
-            margin-left: 1.4rem;
+            margin-left: 2rem;
             font-weight: 700;
             background-color: $clr-primary-8;
             color: $clr-primary-1;
@@ -418,7 +448,7 @@
 
     //$ -- Media -- //
 
-    @include media-min(946px) {
+    @include media-min(1125px) {
 
         &__center {
             display: flex;
@@ -447,6 +477,77 @@
 }
 
 // & ------- End Of Section-Contact ------- //
+
+
+
+// & ------- Section-Gallery ------- //
+
+.section-gallery {
+
+    &__img-container {
+        position: relative;
+        background-color: $clr-primary-5;
+
+        &:hover .section-gallery__img {
+            opacity: 0.6;
+        }
+
+        &:hover .section-gallery__icon {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+        height: 28rem;
+        object-fit: cover;
+        transition: $transition;
+    }
+
+    &__icon {
+        @include center-pos;
+        font-size: 2.6rem;
+        color: #fff;
+        opacity: 0;
+        transition: $transition;
+
+    }
+
+
+
+    //$ -- Media -- //
+
+    @include media-min(534px) {
+
+        &__center {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__img-container {
+            flex: 0 0 50%;
+        }
+    }
+
+    //$ ---- //
+
+
+
+    //$ -- Media -- //
+
+    @include media-min(896px) {
+
+        &__img-container {
+            flex: 0 0 25%;
+        }
+    }
+
+    //$ ---- //
+}
+
+
+
+// & ------- End Of Section-Gallery ------- //
 
 
 //*---------------------------- //
